@@ -1,0 +1,139 @@
+body {
+  background-color: hsl(30, 38%, 92%);
+}
+
+.card {
+  background-color: hsl(0, 0%, 100%);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 600px;
+  margin: auto;
+  border-radius: 20px;
+}
+
+.image-content {
+  width: 300px;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+.full-content {
+  width: 300px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.full-content .product-type, .product-title, .product-description, .product-price {
+  padding-left: 35px;
+  padding-right: 35px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.product-type {
+  color: hsl(228, 12%, 48%);
+  font-variant-caps: all-small-caps;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+}
+
+.product-title {
+  font-family: 'Fraunces', serif;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.product-description {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  color: hsl(228, 12%, 48%);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.product-price {
+  font-family: 'Fraunces', serif;
+  font-weight: 700; /* revisar esto font weight */
+  font-size: 1.7rem;  /* revisar esto de rem */
+  color: hsl(120, 100%, 25%);
+}
+
+.reduced-product-price {
+  padding-left: 10px;
+  color: hsl(228, 12%, 48%);
+  font-size: 14px;
+  text-decoration: line-through;
+}
+
+.buy-product {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  color: hsl(0, 0%, 100%);
+  margin-left: 35px;
+  margin-right: 35px;
+  border-radius: 10px;
+  border: none;
+  background-color: hsl(158, 36%, 37%);
+  cursor: pointer;
+  font-style: bold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 230px;
+  height: 50px;
+  text-align: center;
+}
+
+.buy-product:hover {
+  background-color: hsl(158, 45%, 20%);
+}
+
+.buy-product:active {
+  background-color: hsl(158, 45%, 20%);
+}
+
+.icon-cart {
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-right: 10px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 500px) {
+  .card {
+    width: 375px;
+    display: block;
+  }
+  
+  .image-content {
+    content: url(/images/image-product-mobile.jpg);
+    width: 375px;
+    border-radius: 20px 20px 0px 0px;
+  }
+
+  .full-content {
+    width: 375px;
+  }
+
+  .buy-product {
+    width: 305px;
+  }
+
+  .buy-product:hover {
+    background-color: hsl(158, 45%, 20%);
+  }
+
+  .buy-product:active {
+    background-color: hsl(158, 45%, 20%);
+  }
+}
