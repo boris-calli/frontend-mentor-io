@@ -1,0 +1,85 @@
+:root {
+    --primary-color: hsl(47, 88%, 63%);
+    --secondary-color: hsl(0, 0%, 100%);
+    --card-border-color: hsl(0, 0%, 7%);
+    --font-color-grey: hsl(0, 0%, 50%);
+    --font-color-black: hsl(0, 0%, 7%);
+    --card-size: 350px;
+    --font-size: 1em;
+    --font-family: "Figtree", sans-serif;
+}
+
+body {
+    background-color: var(--primary-color, --secondary-color);
+}
+
+main {
+    width: 100%;
+}
+
+.course-card {
+    border-color: var(--card-border-color);
+    border-style: solid;
+    border-width: thin;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: var(--secondary-color);
+    font-family: var(--font-family);
+    font-weight: 500;
+    width: var(--card-size);
+    font-size: var(--font-size);
+    box-shadow: 8px 8px 0 0 var(--font-color-black);
+    margin: auto;
+
+    .img-course {
+        border-radius: 15px;
+        width: var(--card-size);
+    }
+
+    .subject {
+        display: block;
+        font-weight: 800;
+        background-color: var(--primary-color);
+        padding: 5px 10px;
+        border-radius: 5px;
+        width: max-content;
+        
+    }
+
+    h3 {
+        font-weight: 800;
+        font-size: 1.6em;
+        cursor: url('./assets/images/cursor.png'), auto;
+
+        &:hover {
+          color: var(--primary-color);
+          transition: .2s;
+        }
+    }
+
+    .course-descripton {
+        color: var(--font-color-grey);
+        line-height: 1.5em;
+    }
+
+    .user {
+        display: flex;
+        align-items: center;
+    }
+
+    .user-avatar {
+        width: 40px;
+    }
+
+    .user-name {
+        font-weight: 800;
+        margin-left: 1em;
+    }
+
+}
+
+.course-card:active {
+    box-shadow: 14px 14px 0 0 var(--font-color-black);
+    transition: .2s;
+}
+

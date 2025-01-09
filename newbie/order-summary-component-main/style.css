@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+  /* Primary Colors */
+  --clr-paleBlue: hsl(225, 100%, 94%);
+  --clr-brightBlue: hsl(245, 75%, 52%);
+  /* Neutral Colors */
+  --clr-veryPaleBlue: hsl(225, 100%, 98%);
+  --clr-desaturedBlue: hsl(224, 23%, 55%);
+  --clr-darkBlue: hsl(223, 47%, 23%);
+  /* Tipography */
+  --font-size: 16px;
+  --font-wght-500: 500;
+  --font-wght-700: 700;
+  --font-wght-900: 900;
+  --font-family-RedHatDisplay: "Red Hat Display", sans-serif;;
+}
+
+body {
+  background-color: var(--clr-paleBlue);
+  font-family: var(--font-family-RedHatDisplay);
+  font-size: var(--font-size);
+}
+
+.musicCard {
+  width: 375px;
+  background-color: var(--clr-veryPaleBlue);
+  border-radius: 15px;
+  box-sizing: border-box;
+  margin: auto;
+  padding-bottom: 10px;
+  box-shadow: 0 .5em 3em  var(--clr-desaturedBlue);
+  
+  .musicCard__img {
+    margin: 0;
+    width: 375px;
+    border-radius: 15px 15px 0 0;
+  }
+
+  .musicCard__info {
+    padding: 0 30px;
+    
+    .musicCard__title {
+      font-weight: var(--font-wght-900);
+      text-align: center;
+      color: var(--clr-darkBlue);
+    }
+
+    .musicCard_description {
+      text-align: center;
+      color: var(--clr-desaturedBlue);
+    }
+
+    .musicCard__infoPlan {
+      display: flex;
+      align-items: center;
+      background-color: hsl(225, 100%, 94%, 30%);
+      border-radius: 10px;
+      padding: 0 10px;
+      
+      .musicCard__plan {
+        margin-left: 20px;
+        .musicCard__typePlan,
+        .musicCard__pricePlan {
+          display: block;
+        }
+
+        .musicCard__typePlan {
+          color: var(--clr-darkBlue);
+          font-weight: var(--font-wght-700);
+        }
+
+        .musicCard__pricePlan {
+          color: var(--clr-desaturedBlue);
+        }
+      }
+
+      .musicCard__changePlan {
+        font-weight: var(--font-wght-700);
+        margin-right: 0;
+        margin-left: auto;
+
+        &:hover {
+          text-decoration: none;
+          opacity: .5;
+        }
+      }
+    }
+    
+    .musicCard__payBtn,
+    .musicCard__cancelOrderBtn {
+      display: block;
+      font-weight: var(--font-wght-700);      
+      font-size: .9em;
+      margin-bottom: 15px;
+    }
+    
+    .musicCard__payBtn {
+      width: 100%;
+      border-radius: 10px;
+      height: 40px;
+      background-color: var(--clr-brightBlue);
+      border: solid var(--clr-brightBlue);
+      color: var(--clr-veryPaleBlue);
+      box-shadow: 0 1em 1em var(--clr-paleBlue);
+      margin-top: 20px;
+
+      &:hover {
+        opacity: .8;
+        cursor: pointer;
+      }
+    }
+    
+    .musicCard__cancelOrderBtn {
+      color: var(--clr-desaturedBlue);
+      text-align: center;
+      text-decoration: none;
+
+      &:hover {
+        color: var(--clr-darkBlue);
+      }
+    }
+  }
+}
+
+@media screen and (width <= 375px) {
+  .musicCard {
+    width: 325px;
+    .musicCard__img {
+      width: 325px;
+    }
+  }
+}

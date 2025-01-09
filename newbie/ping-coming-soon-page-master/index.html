@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="stylesheet" href="style.css">
+  <script defer src="./script.js"></script>
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  
+  <title>Frontend Mentor | Ping coming soon page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <header class="logo">
+    <img class="logo__img" src="./images/logo.svg" alt="logo">
+  </header>
+  <main class="ping">
+    <h2 class="ping__announce">
+      <span class="ping__announce-unbold">
+        We are launching
+      </span>
+      soon!
+    </h2>
+    <p class="ping__description">
+      Subscribe and get notified
+    </p>
+    <form class="ping__form" action="">
+      <input id="email-input" class="ping__email-input" placeholder="Your email address" type="text">
+      <p id="error-message" class="ping__error-message">
+        Please provide a valid email address
+      </p>
+      <button id="notify-btn" class="ping__notify-btn" type="button">
+        Notify Me
+      </button>
+    </form>
+    <img class="ping__dashboard-img" src="./images/illustration-dashboard.png" alt="dashboard">
+    <section class="ping__social-media">
+      <ion-icon class="ping__social-icon" name="logo-facebook"></ion-icon>
+      <ion-icon class="ping__social-icon" name="logo-twitter"></ion-icon>
+      <ion-icon class="ping__social-icon" name="logo-instagram"></ion-icon>
+    </section>
+    <p class="ping__copyright">
+      &copy; Copyright Ping. All rights reserved.
+    </p>
+  </main>
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | NFT preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <main>
+    <article class="nftCard">
+      <figure class="nftCard__img">
+        <img class="nftCard__img-token" src="./images/image-equilibrium.jpg" alt="nft">
+        <img class="nftCard__img-view" src="./images/icon-view.svg" alt="nft">
+      </figure>
+      <section class="nftCard__info">
+        <h3 class="nftCard__nftName">
+          Equilibrium #3429
+        </h3>
+        <p class="nftCard__description">
+          Our Equilibrium collection promotes balance and calm.
+        </p>
+        <section class="nftCard__valueTime">
+          <p class="nftCard__value">
+            <img class="nftCard__valueImg" src="./images/icon-ethereum.svg" alt="crypto">
+            <span class="nftCard__valueNow">
+              0.041 ETH
+            </span>
+          </p>
+          <p class="nftCard__time">
+            <img class="nftCard__timeImg" src="./images/icon-clock.svg" alt="time">
+            <span class="nftCard__timeLeft">
+              3 days left
+            </span>
+          </p>
+        </section>
+        <section class="nftCard__creator">
+          <img class="nftCard__creatorAvatar" src="./images/image-avatar.png" alt="avatar">
+          <p class="nftCard__creatorName">
+            <span class="nftCard__creator-title">Creation of</span>
+            Jules Wyvern
+          </p>
+        </section>
+      </section>
+    </article>
+  </main>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+</html>

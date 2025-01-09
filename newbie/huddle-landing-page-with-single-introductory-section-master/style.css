@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&display=swap');
+
+:root {
+  /* Primary Colors */
+  --clr-violet: hsl(257, 40%, 49%);
+  --clr-soft-magenta: hsl(300, 69%, 71%);
+
+  /* Tipography */
+  --font-family-Open-Sans: "Open Sans", sans-serif;
+  --font-family-Poppins: "Poppins", sans-serif;
+  --font-wght-600: 600;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(./images/bg-desktop.svg);
+  background-repeat: no-repeat;
+  background-color: var(--clr-violet);
+}
+
+.header {
+  max-width: 90%;
+  margin: 1.5rem auto 0 auto;
+}
+
+.header__logo {
+  width: 13rem;
+}
+
+.illustration__mockup {
+  max-width: 100%;
+}
+
+.huddle {
+  max-width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin: 3rem auto 0 auto;
+}
+
+.huddle__left {
+  max-width: 55%;
+}
+
+.huddle__right {
+  max-width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.huddle__title {
+  color: hsl(0, 0%, 100%);
+  font-family: var(--font-family-Poppins);
+  font-weight: var(--font-wght-600);
+  font-size: 2.3em;
+  margin-top: 2.5rem;
+}
+
+.huddle__description {
+  color: hsl(0, 0%, 100%);
+  font-family: var(--font-family-Open-Sans);
+  font-size: 1em;
+}
+
+.register {
+  margin: 1.5rem auto;
+}
+
+.register__btn {
+  display: block;
+  background-color: hsl(0, 0%, 100%);
+  font-family: var(--font-family-Poppins);
+  color: var(--clr-violet);
+  border: solid hsl(0, 0%, 100%);
+  width: 12rem;
+  border-radius: 2rem;
+  padding: .5rem 0;
+  box-shadow: 0 .1rem .5rem hsla(0, 0%, 0%, .5);
+
+  &:hover {
+    background-color: var(--clr-soft-magenta);
+    border: solid var(--clr-soft-magenta);
+    color: hsl(0, 0%, 100%);
+    transition: .2s;
+    cursor: pointer;
+  }
+}
+
+.huddle-social {
+  margin: 0 0 0 0;
+  display: flex;
+  justify-content: end;
+}
+
+.huddle-social__facebook,
+.huddle-social__twitter,
+.huddle-social__instagram {
+  font-size: 1.5em;
+  color: hsl(0, 0%, 100%);
+  margin: 0 .5rem;
+
+  &:hover {
+    color: var(--clr-soft-magenta);
+    transition: .2s;
+    cursor: pointer;
+  }
+}
+
+@media screen and (width <= 900px) {
+  body {
+    background-image: url(./images/bg-mobile.svg);
+    padding: 0 1rem;
+  }
+
+  .huddle {
+    display: block;
+  }
+
+  .huddle__left,
+  .huddle__right {
+    max-width: 100%;
+  }
+
+  .huddle__title {
+    font-size: 1.4em;
+    text-align: center;
+  }
+
+  .huddle__description {
+    font-size: .92em;
+    text-align: center;
+  }
+
+  .header__logo {
+    max-width: 40%;
+  }
+
+  .register__btn {
+    margin: auto;
+  }
+
+  .huddle-social {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+  }
+}

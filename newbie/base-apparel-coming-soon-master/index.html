@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="stylesheet" href="style.css">
+
+  <script defer src="./script.js"></script>
+  
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <main class="base-apparel">
+    <section class="base-apparel__logo-section">
+      <img class="base-apparel__logo" src="./images/logo.svg" alt="logo">
+    </section>
+    <picture class="base-apparel__hero">
+      <source media="(width <= 400px)" srcset="./images/hero-mobile.jpg">
+      <img class="base-apparel__hero-img" src="./images/hero-desktop.jpg" alt="hero img">
+    </picture>
+    <h1 class="base-apparel__title">
+      <span class="base-apparel__title-highlighted">
+        We're
+      </span>
+      <br>
+      coming
+      <br>
+      soon
+    </h1>
+    <p class="base-apparel__description">
+      Hello fellow shoppers! We're currently building our new fashion store. 
+  Add your email below to stay up-to-date with announcements and our launch deals.
+    </p>
+    <section class="base-apparel__email-section">
+      <input id="input-email" class="base-apparel__input-email" type="text" placeholder="Email Address">
+      <img class="base-apparel__error base-apparel__error-icon" src="./images/icon-error.svg" alt="error">
+      <button id="send-button" class="base-apparel__button-send" type="button">
+        <img class="base-apparel__button-logo" src="./images/icon-arrow.svg" alt="button logo">
+      </button>
+      <p class="base-apparel__error base-apparel__error-message">
+        Please provide a valid email
+      </p>
+    </section>
+  </main>
+  
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </p>
+  </footer>
+</body>
+</html>

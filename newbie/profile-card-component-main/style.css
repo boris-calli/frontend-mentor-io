@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+
+:root {
+  /* Primary Colors */
+  --clr-darkCyan: hsl(185, 75%, 39%);
+  --clr-veryDarkDesatured: hsl(229, 23%, 23%);
+  --clr-darkGrayishBlue: hsl(227, 10%, 46%);
+
+  /* Neutral Colors */
+  --clr-darkGray: hsl(0, 0%, 59%);
+
+  /* Tipography */
+  --font-family: "Kumbh Sans", sans-serif;
+  --font-size: 18px;
+  --font-wght-700: 700;
+}
+
+body {
+  background-color: var(--clr-darkCyan);
+  font-family: var(--font-family);
+  background-image: url(./images/bg-pattern-bottom.svg), url(./images/bg-pattern-top.svg);
+  background-position: calc(50% + 30rem) calc(50% + 30rem),
+                       calc(50% - 30rem) calc(50% - 30rem);/*-100% 130%, 180% -70%;*/
+  background-repeat: no-repeat;
+}
+
+.card {
+  width: 330px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 20px;
+  text-align: center;
+  margin: 100px auto;
+  box-sizing: border-box;
+}
+
+.card__topDecoration {
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+}
+
+.card__img {
+  margin-top: -3.5em;
+  border-radius: 50%;
+  border: .5em solid hsl(0, 0%, 100%);
+}
+
+.card__userName {
+  color: var(--clr-veryDarkDesatured);
+  font-weight: var(--font-wght-700);
+  margin-bottom: 0;
+
+  .card__userAge {
+    font-weight: 400;
+    color: var(--clr-darkGrayishBlue);
+  }
+}
+
+.card__userCountry {
+  margin-top: .5em;
+  margin-bottom: 2em;
+  color: var(--clr-darkGrayishBlue);
+}
+
+.card__stats {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 60px;
+  border-top: 1px solid var(--clr-darkGray);
+}
+
+.card__statNumber {
+  font-size: var(--font-size);
+  font-weight: var(--font-wght-700);
+  margin-bottom: 0;
+  color: var(--clr-veryDarkDesatured);
+}
+
+.card__statName {
+  margin-top: .5em;
+  font-size: .8em;
+  color: var(--clr-darkGrayishBlue);
+}

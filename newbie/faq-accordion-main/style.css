@@ -1,0 +1,113 @@
+@font-face {
+    font-family: "Work Sans";
+    src: url("./assets/fonts/WorkSans-VariableFont_wght.ttf") format(truetype);
+}
+
+:root {
+  /* Colors */
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-light-pink: hsl(275, 100%, 97%);
+  --clr-grayish-purple: hsl(292, 16%, 49%);
+  --clr-dark-purple: hsl(292, 42%, 14%);
+  --clr-purple-heart: hsl(281, 58%, 50%);
+
+  /* Typography */
+  --font-family-Work-Sans: "Work Sans";
+  --font-wght-600: 600;
+  --font-wght-700: 700;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: var(--font-family-Work-Sans);
+}
+
+body {
+  padding: 0 1rem;
+  background-color: var(--clr-light-pink);
+  background-image: url(./assets/images/background-pattern-desktop.svg);
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.faq {
+  background-color: var(--clr-white);
+  padding: 1.2rem;
+  border-radius: .5rem;
+  max-width: 35rem;
+  box-shadow: 0 1rem 1rem hsla(292, 16%, 49%, .2);
+  /*margin: 16% auto 0 auto;*/
+}
+
+.faq__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.faq__header-icon {
+  width: 2rem;
+}
+
+.faq__header-title {
+  font-size: 2.5em;
+  margin: 0 0 0 1rem;
+  font-weight: var(--font-wght-700);
+  color: var(--clr-dark-purple);
+}
+
+.faq__qa-question {
+  border-bottom: .1rem solid var(--clr-light-pink);
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.faq__qa-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.faq__qa-summary-title {
+  max-width: 80%;
+  font-weight: var(--font-wght-600);
+  color: var(--clr-dark-purple);
+
+  &:hover {
+    color: var(--clr-purple-heart);
+  }
+}
+
+.faq__qa-question[open] .faq__qa-summary-marker{
+  content: url(./assets/images/icon-minus.svg);
+}
+
+.faq__qa-answer {
+  color: var(--clr-grayish-purple);
+}
+
+@media screen and (width <= 375px){
+  body {
+    background-image: url(./assets/images/background-pattern-mobile.svg);
+    background-repeat: no-repeat;
+  }
+
+  /*.faq {
+    margin: 45% auto 0 auto;
+  }*/
+
+  .faq__header-title {
+    font-size: 2em;
+  }
+
+  .faq__header-icon {
+    width: 1.5rem;
+  }
+}

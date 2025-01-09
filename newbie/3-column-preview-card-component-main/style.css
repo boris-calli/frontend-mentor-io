@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+:root {
+  /* Primary Colors */
+  --clr-brightOrange: hsl(31, 77%, 52%);
+  --clr-darkCyan: hsl(184, 100%, 22%);
+  --clr-veryDarkCyan: hsl(179, 100%, 13%);
+
+  /* Neutral Colors */
+  /*** Paragraphs Color ***/
+  --clr-transparentWhite: hsla(0, 0%, 100%, 0.75);
+
+  /*** Background, headings, buttons Color ***/
+  --clr-veryLightGray: hsl(0, 0%, 95%);
+
+  /* Tipography */
+  --font-family-LexendDeca: "Lexend Deca", sans-serif;
+  --font-family-BigShouldersDisplay: "Big Shoulders Display", sans-serif;
+  --font-size: 15px;
+}
+
+body {
+  background-color: var(--clr-veryLightGray);
+  font-family: var(--font-family-LexendDeca);
+  font-size: var(--font-size);
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin: 30px auto;
+  width: 840px;
+}
+
+.card__sedan,
+.card__suv,
+.card__luxury {
+  padding: 40px;
+  width: 280px;
+  box-sizing: border-box;
+}
+
+.card__sedan {
+  background-color: var(--clr-brightOrange);
+  border-radius: 10px 0 0 10px;
+}
+
+.card__suv {
+  background-color: var(--clr-darkCyan);
+}
+
+.card__luxury {
+  background-color: var(--clr-veryDarkCyan);
+  border-radius: 0 10px 10px 0;
+}
+
+.card__title {
+  font-family: var(--font-family-BigShouldersDisplay);
+  color: var(--clr-veryLightGray);
+  font-size: 2.5em;
+  text-transform: uppercase;
+}
+
+.card__description {
+  color: var(--clr-transparentWhite);
+  line-height: 1.5em;
+}
+
+.card__btn {
+  font-family: var(--font-family-LexendDeca);
+  border-radius: 2em;
+  border: solid var(--clr-veryLightGray);
+  width: 150px;
+  height: 40px;
+  background-color: var(--clr-veryLightGray);
+  margin-top: 3em;
+
+  &:hover {
+    border-color: var(--clr-veryLightGray);
+    cursor: pointer;
+    color: var(--clr-veryLightGray);
+  }
+}
+
+.card__btn-sedan {
+  color: var(--clr-brightOrange);
+
+  &:hover {
+    background-color: var(--clr-brightOrange);
+  }
+}
+
+.card__btn-suv {
+  color: var(--clr-darkCyan);
+  &:hover {
+    background-color: var(--clr-darkCyan);
+  }
+}
+
+.card__btn-luxury {
+  color: var(--clr-veryDarkCyan);
+  &:hover {
+    background-color: var(--clr-veryDarkCyan);
+  }
+}
+
+@media screen and (width <= 375px) {
+  .card {
+    display: block;
+    border-radius: 10px;
+    width: 280px;
+  }
+
+  .card__sedan {
+    border-radius: 10px 10px 0 0;
+  }
+
+  .card__luxury {
+    border-radius: 0 0 10px 10px;
+  }
+}

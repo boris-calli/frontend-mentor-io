@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  /* Primary Colors */
+  --clr-red: hsl(0, 78%, 62%);
+  --clr-cyan: hsl(180, 62%, 55%);
+  --clr-orange: hsl(34, 97%, 64%);
+  --clr-blue: hsl(212, 86%, 64%);
+
+  /* Neutral Colors */
+  --clr-veryDarkBlue: hsl(234, 12%, 34%);
+  --clr-grayishBlue: hsl(229, 6%, 66%);
+  --clr-veryLightGray: hsl(0, 0%, 98%);
+
+  /* Tipography */
+  --font-family-Poppins: "Poppins", sans-serif;
+  --font-wght-200: 200;
+  --font-wght-600: 600;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: var(--font-family-Poppins);
+}
+
+main {
+  max-width: 70rem;
+  margin: 0 auto;
+}
+
+body {
+  padding: 0 1rem;
+}
+
+.header {
+  text-align: center;
+  color: var(--clr-veryDarkBlue);
+}
+
+.header__title {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.header__title-first {
+  font-weight: var(--font-wght-200);
+}
+
+.header__title-second {
+  font-weight: var(--font-wght-600);
+  margin-bottom: 1rem;
+}
+
+.header__description {
+  max-width: 28rem;
+  margin: auto;
+  color: var(--clr-grayishBlue);
+  font-size: .8em;
+}
+
+.cards-list {
+  padding: 3rem 0 0 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cards-list__left,
+.cards-list__right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cards-list__center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  max-width: 20rem;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: .3rem;
+  box-shadow: 0 .5rem 1rem hsl(229, 6%, 66%, .5);
+}
+
+.card__title {
+  color: var(--clr-veryDarkBlue);
+  font-weight: var(--font-wght-600);
+  margin: 0 0 .5rem 0;
+}
+
+.card__description {
+  color: var(--clr-grayishBlue);
+  margin-top: 0;
+  font-size: .8em;
+}
+
+.card__img {
+  display: block;
+  margin-left: auto;
+}
+
+.card-supervisor {
+  border-top: .3rem solid var(--clr-cyan);
+}
+
+.card-team-builder {
+  border-top: .3rem solid var(--clr-red);
+}
+
+.card-karma {
+  border-top: .3rem solid var(--clr-orange);
+}
+
+.card-calculator {
+  border-top: .3rem solid var(--clr-blue);
+}
+
+@media screen and (width <= 1000px) {
+  .header__description {
+    font-size: 1em;
+  }
+
+  .cards-list {
+    display: block;
+  }
+}
